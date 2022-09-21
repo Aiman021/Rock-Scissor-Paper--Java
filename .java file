@@ -1,0 +1,58 @@
+ package scissorRockPaper;
+
+import java.util.Scanner;
+
+public class Game 
+{
+	public static void main(String [] args)
+	{
+		//Generate a random number 0-2
+		int random = (int)(Math.random() * 3);
+		
+		//prompt user for input a number ( 0 for Scissors, 1 for Rock, and 2 for Paper
+		Scanner input = new Scanner(System.in);
+		System.out.println("Choose a number: Scissor (0), Rock (1), Paper (2): ");
+		int number = input.nextInt();
+		
+		//Checking if the random number is Scissor (0). then evaluate results based on the input
+		if (random == 0)
+		{
+			if (number == 0)
+				System.out.println("The computer is Scissor. You are Scissor. It is a draw");
+			else if (number == 1)
+				System.out.println("The computer is Scissor. You are Rock. You Won");
+			else if (number == 2)
+				System.out.println("The computer is Scissor. You are Paper. You Lost");
+		}
+		
+		//Checking if the random number is Rock (1). then evaluate results based on the input
+		if (random == 1)
+		{
+			if (number == 0)
+				System.out.println("The computer is Rock. You are Scissor. You Lost");
+			
+			else if (number == 1)
+				System.out.println("The computer is Rock. You are Rock. It is a draw");
+			
+			else if (number == 2)
+				System.out.println("The computer is Rock. You are Paper. You Won");
+
+		}
+		
+		//Checking if the random number is Paper (2). then evaluate results based on the input
+		if (random == 2)
+		{
+			if (number == 0)
+				System.out.println("The computer is Paper. You are Scissor. You Won");
+
+			else if (number == 1)
+				System.out.println("The computer is Paper. You are Rock. You Lost");
+
+			else if (number == 2)
+				System.out.println("The computer is Paper. You are Paper. It is a draw");
+
+		}
+	}
+	
+
+}
